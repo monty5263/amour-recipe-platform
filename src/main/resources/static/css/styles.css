@@ -1,0 +1,121 @@
+body {
+	margin: 0;
+	overflow: hidden;
+}
+
+.nav {
+	background-color: rgb(255, 128, 255);
+}
+
+#transition-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: Arial, sans-serif;;
+}
+
+button, input[type="submit"] {
+	border-radius: 16px;
+	border: none;
+	background-color: rgba(255, 120, 160, 0.9);
+	color: white;
+	font-size: 14px;
+	padding: 8px 16px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.center-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: Arial;
+}
+
+.login-header {
+	text-align: center;
+	font-family: "Lucida Handwriting", cursive;
+	color: rgba(255, 120, 160, 0.9);
+	font-size: 48px;
+	padding-bottom: 75px;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login-header2 {
+	text-align: center;
+	text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	font-family: "Lucida Handwriting", cursive;
+	color: rgba(255, 120, 160, 0.9);
+}
+
+.login-forgotpass {
+	font-size: 12px;
+	text-align: left;
+	padding-left: 60px;
+}
+
+.login-container {
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	justify-content: flex-start;
+	height: 100%;
+	width: 33.3%;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	background-color: #fafafa;
+}
+
+.login-container input:focus {
+	background-color: pink;
+}
+
+.login-container input[type="text"], .login-container input[type="password"]
+	{
+	width: 75%;
+	padding: 8px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
+	border: 1px solid #eeeeee;
+}
+
+.login-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.side-image {
+	position: relative;
+	width: 66.7%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.side-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.image-text {
+	position: absolute;
+	top: 10%;
+	left: 68%;
+	transform: translate(-50%, -50%);
+	width: 60%;
+	color: white;
+	font-size: 48px;
+	font-family: "Lucida Handwriting", cursive;
+	max-width: 50ch;
+	text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+.card-display {
+	padding-bottom: 50px;
+}
