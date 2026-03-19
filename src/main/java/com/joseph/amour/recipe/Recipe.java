@@ -19,13 +19,13 @@ public class Recipe {
 
 	@Column(nullable = false)
 	private String name;
-	
+
 	@Column(length = 150)
 	private String description;
-	
+
 	@Column
 	private String category;
-	
+
 	@JoinColumn
 	@ManyToOne
 	private User user;
