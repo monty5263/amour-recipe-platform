@@ -10,13 +10,11 @@ import com.joseph.amour.recipe.RecipeServiceImpl;
 
 @Controller
 @RequestMapping("/")
-public class ViewController {
+public class NavController {
 
-	private final RecipeServiceImpl recipeService;
-
-	public ViewController(RecipeServiceImpl recipeService) {
-		this.recipeService = recipeService;
-	}
+	// This controller is specifically meant to handle basic user navigation to the
+	// main front pages
+	// of the website. (Login, Logout, Front Page, About, Contact, Email)
 
 	public String navbar() {
 		return "navbar";
@@ -24,25 +22,12 @@ public class ViewController {
 
 	@GetMapping("/home")
 	public String home() {
-		
 		return "index";
-	}
-
-	@GetMapping("/recipes")
-	public String recipes(Model model) {
-		model.addAttribute("recipes", recipeService.getAllRecipes());
-		return "recipes";
 	}
 
 	@GetMapping("/login")
 	public String login() {
 		return "login";
-	}
-
-	@GetMapping("/recipes/search")
-	public String search(@RequestParam("name") String name, Model model) {
-		model.addAttribute("recipes", recipeService.searchForRecipe(name));
-		return "recipes";
 	}
 
 }

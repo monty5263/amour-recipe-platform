@@ -8,11 +8,7 @@ import com.joseph.amour.recipe.Recipe;
 import com.joseph.amour.user.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
-	
-	List<Recipe> findByNameContainingIgnoreCase(String name);
 
-	void addUser();
-	
-	
+	List<Recipe> findByNameContainingIgnoreCase(String name);
 
 }
