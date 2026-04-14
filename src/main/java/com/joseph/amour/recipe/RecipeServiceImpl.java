@@ -37,5 +37,7 @@ public class RecipeServiceImpl implements RecipeService {
 		List<Recipe> foundRecipes = recipeRepository.findByNameContainingIgnoreCase(search);
 		return foundRecipes;
 	}
+	
+	
 
 }

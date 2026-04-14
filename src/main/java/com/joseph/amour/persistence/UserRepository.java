@@ -9,6 +9,6 @@ import com.joseph.amour.user.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 
-	List<Recipe> findByNameContainingIgnoreCase(String name);
+	List<User> findByNameContainingIgnoreCase(String name);
 
 }

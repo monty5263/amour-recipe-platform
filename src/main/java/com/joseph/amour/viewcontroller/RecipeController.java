@@ -23,7 +23,7 @@ public class RecipeController {
 		return "recipes";
 	}
 
-	@GetMapping("/recipes/search")
+	@GetMapping("/search")
 	public String search(@RequestParam("name") String name, Model model) {
 		model.addAttribute("recipes", recipeService.searchForRecipe(name));
 		return "recipes";
