@@ -3,31 +3,17 @@ package com.joseph.amour.recipe;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
 
-@Service
-public class RecipeService {
+import com.joseph.amour.recipe.Recipe;
 
-	private RecipeRepository recipeRepository;
+public interface RecipeService {
 
-	public RecipeService(RecipeRepository recipeRepository) {
-		this.recipeRepository = recipeRepository;
-	}
+	public List<Recipe> getAllRecipes();
 
-	public List<Recipe> getAllRecipes() {
-		return recipeRepository.findAll();
-	}
+	public Recipe createRecipe(Recipe recipe);
 
-	public Recipe createRecipe(Recipe recipe) {
-		return recipeRepository.save(recipe);
-	}
+	public void deleteRecipe(Recipe recipe);
 
-	public void deleteRecipe(Recipe recipe) {
-		recipeRepository.delete(recipe);
-	}
-
-	public List<Recipe> searchForRecipe(String search) {
-		return recipeRepository.findByNameContainingIgnoreCase(search);
-	}
+	public List<Recipe> searchForRecipe(String search);
 
 }

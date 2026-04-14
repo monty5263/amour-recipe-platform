@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.joseph.amour.recipe.RecipeService;
+import com.joseph.amour.recipe.RecipeServiceImpl;
 
 @Controller
 @RequestMapping("/")
 public class ViewController {
 
-	private final RecipeService recipeService;
+	private final RecipeServiceImpl recipeService;
 
-	public ViewController(RecipeService recipeService) {
+	public ViewController(RecipeServiceImpl recipeService) {
 		this.recipeService = recipeService;
 	}
 

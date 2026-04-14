@@ -12,6 +12,7 @@ import jakarta.persistence.ManyToOne;
 
 @Entity(name = "recipes")
 public class Recipe {
+	
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
